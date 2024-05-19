@@ -12,7 +12,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className='text-white opacity-80'>
 
      <Routes>
       <Route path='/' element={<Layout/>}>
@@ -25,7 +25,7 @@ function App() {
 
      </Routes>
     
-    </>
+    </div>
   )
 }
 
