@@ -7,6 +7,8 @@ import Layout from './componets/Layout'
 import Home from './componets/Home'
 import Login from './componets/Login'
 import Register from './componets/Register'
+import { Toaster } from 'react-hot-toast'
+import { UserContextProvider } from './context/UserContext'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,17 +16,18 @@ function App() {
   return (
     <div className='text-white opacity-80'>
 
-     <Routes>
-      <Route path='/' element={<Layout/>}>
+      <UserContextProvider>
+
+         <Routes>
+       <Route path='/' element={<Layout/>}>
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        </Route>
 
-
-      </Route>
-
-     </Routes>
-    
+        </Routes>
+      </UserContextProvider>
+     <Toaster/>
     </div>
   )
 }

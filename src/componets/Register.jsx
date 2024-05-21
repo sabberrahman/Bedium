@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import toast from 'react-hot-toast'
 
 
 
@@ -7,11 +8,17 @@ const Register = () => {
   const [password,setPassword]=useState('')
    const register =async(e)=>{
     e.preventDefault();
-    await fetch('http://localhost:4000/register',{
+    const res =await fetch('http://localhost:4000/register',{
       method: 'POST',
       body:JSON.stringify({username,password}),
       headers: {'Content-Type': 'application/json'},
     })
+    console.log(res);
+    if (res.ok) {
+      toast.success('Successfully created!');
+    } else {
+      toast.error('This is an error!');
+    }
    }
     return (
         <>
