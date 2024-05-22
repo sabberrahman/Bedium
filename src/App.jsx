@@ -9,6 +9,7 @@ import Login from './componets/Login'
 import Register from './componets/Register'
 import { Toaster } from 'react-hot-toast'
 import { UserContextProvider } from './context/UserContext'
+import CreatePost from './componets/CreatePost'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +24,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/create' element={<CreatePost/>}/>
         </Route>
 
         </Routes>

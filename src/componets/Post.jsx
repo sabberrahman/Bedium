@@ -1,6 +1,9 @@
 import React from 'react';
+import {format} from 'date-fns'
 
-const Post = () => {
+
+const Post = ({title,summary,content,cover,createdAt,author}) => {
+    
     return (
         <>
             <div className="post md:mb-8 ">
@@ -9,12 +12,12 @@ const Post = () => {
             </div>
             <div className="text m-2 mb-1">
                 <p className="info">
-                <a  className="author text-sky-400">@Sabberdev</a>
-                <time className="t text-slate-500">18-05-24 8pm</time>
+                <a  className="author text-sky-400">{author && author.username ? `@${author.name}` : 'Author Unknown'}</a>
+                <time className="t text-slate-500">{format(new Date(createdAt),'MMM d,yyyy HH:mm')} </time>
                </p>
-               <h2 className='font-bold '>Lorem ipsum dolor ssicing elit. Qui molestiae, eveniet doloremque nisi blanditiis non quis imped itaque?</h2>
+               <h2 className='font-bold '>{title}</h2>
                
-            <p className='summary hidden md:block opacity-60'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsa velit, nemo voluptatem at illum tempora quae porro. Modi libero dolores harum, nihil excepturi nulla minima cum quia ut quos!</p>
+            <p className='summary hidden md:block opacity-60'>{summary}</p>
             </div>
             <hr />
           </div> 

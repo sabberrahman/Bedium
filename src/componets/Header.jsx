@@ -44,7 +44,7 @@ const Header = () => {
                 <nav>
                   {username && (
                     <>
-                   <Link to="/create" className=" whitespace-nowrap px-2 py-2 rounded-md text-white font-bold bg-emerald-500 hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-700 shadow-md shadow-cyan-500/50 text-sm flex md:px-4">+ Create new post</Link>
+                   <Link to="/create" className=" whitespace-nowrap px-2 py-2 rounded-md text-black font-bold bg-white hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-700 shadow-md shadow-cyan-500/50 text-sm flex md:px-4">+ Create new post</Link>
                     <button  class="inline-block px-2 py-2 rounded-md text-white font-bold bg-emerald-500 hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-700 shadow-md shadow-cyan-500/50 md:px-4"
                     onClick={logout}>Logout</button>
 
