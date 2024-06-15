@@ -9,7 +9,7 @@ const Register = () => {
   const [name,setName]=useState('')
    const register =async(e)=>{
     e.preventDefault();
-    const res =await fetch('http://localhost:4000/register',{
+    const res =await fetch('https://bediumapi.onrender.com/register',{
       method: 'POST',
       body:JSON.stringify({username,password,name}),
       headers: {'Content-Type': 'application/json'},

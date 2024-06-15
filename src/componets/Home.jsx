@@ -4,7 +4,7 @@ import Post from './Post';
 const Home = () => {
     const[posts,setPosts]=useState([])
     useEffect(() => {
-    fetch('http://localhost:4000/post')
+    fetch('https://bediumapi.onrender.com/post')
         .then(res => res.json())
         .then(posts => setPosts(posts))
         .catch(error => console.error('Error fetching posts:', error));

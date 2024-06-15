@@ -6,7 +6,7 @@ const Header = () => {
   const { setUserInfo, userInfo } = useContext(UserContext);
 
   useEffect(() => {
-    fetch('http://localhost:4000/profile', {
+    fetch('https://bediumapi.onrender.com/profile', {
       credentials: 'include',
     })
       .then(res => res.json())
@@ -17,7 +17,7 @@ const Header = () => {
   }, []);
 
   async function logout() {
-    await fetch('http://localhost:4000/logout', {
+    await fetch('https://bediumapi.onrender.com/logout', {
       credentials: 'include',
       method: 'POST',
     })

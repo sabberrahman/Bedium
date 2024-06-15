@@ -9,7 +9,7 @@ const PostPage = () => {
     const[postInfo,setPostInfo]=useState(null)
     console.log(postInfo);
     useEffect(()=>{
-        fetch(`http://localhost:4000/post/${id}`).then(res=>res.json()).then(postInfo=>setPostInfo(postInfo))
+        fetch(`https://bediumapi.onrender.com/post/${id}`).then(res=>res.json()).then(postInfo=>setPostInfo(postInfo))
     },[])
 
     if (!postInfo) return '';
@@ -17,7 +17,7 @@ const PostPage = () => {
         <>
        <div className='post-page'>
   <div className='post-header'>
-  <img src={`http://localhost:4000/${postInfo.cover}`} alt={postInfo.title} className="w-56  h-64 object-cover rounded-lg mx-auto  md:h-72 md:w-80" />
+  <img src={`https://bediumapi.onrender.com/${postInfo.cover}`} alt={postInfo.title} className="w-56  h-64 object-cover rounded-lg mx-auto  md:h-72 md:w-80" />
     <div className="flex justify-between items-center pt-4 px-4">
       <time className="text-gray-500 text-sm">{format(new Date(postInfo.createdAt), 'MMM d,yyyy HH:mm')}</time>
       <div className=" text-sm md:text-xl">

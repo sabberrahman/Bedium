@@ -10,7 +10,7 @@ const Post = ({title,summary,content,cover,createdAt,author,_id}) => {
             <div className="post md:mb-8 ">
             <div className="image">
             <Link to={`/post/${_id}`}>
-             <img src={'http://localhost:4000/'+cover} alt="img for blog" className='  md:scale-100  object-cover h-60' />   
+             <img src={'https://bediumapi.onrender.com/'+cover} alt="img for blog" className='  md:scale-100  object-cover h-60' />   
             </Link>
                
             </div>

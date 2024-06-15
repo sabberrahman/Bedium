@@ -19,7 +19,7 @@ const CreatePost = () => {
       data.set('summary',summary)
       data.set('content',content)
       data.set('file',files[0])
-     const res=  await fetch('http://localhost:4000/post',{
+     const res=  await fetch('https://bediumapi.onrender.com/post',{
         method:'POST',
         body:data,
         credentials:'include',
